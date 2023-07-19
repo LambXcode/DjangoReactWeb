@@ -18,7 +18,7 @@ const Navbar = () => {
                   src="https://code.google.com/images/developers.png"
                   alt=""
                 />
-                Pro.dev <span className="blink"> _</span>
+                Lamcode <span className="blink"> _</span>
               </h5>
               <nav className="nav-menu  mainMenu">
                 <ul>
@@ -43,8 +43,8 @@ const Navbar = () => {
                     <a href="#work">My Work</a>
                   </li>
 
-                  <li data-aos="fade-down" data-aos-duration="1800">
-                    <a href="#contact">Contact</a>
+                  <li data-aos="fade-down" data-aos-duration="2000">
+                    <a href="#work">Contact</a>
                   </li>
                 </ul>
               </nav>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
                 <div>
                   <div className="CvMe">
-                    <button className="my-cv">Contact Me</button>
+                    <button className="#work">Contact Me</button>
                   </div>
                 </div>
 

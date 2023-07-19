@@ -14,7 +14,7 @@ const ContactMe = () => {
               <div class="work-togather-text">
                 <h2 class="h2-title text-white ">Let's Work Together</h2>
                 <p>
-                  Are you impressed and want a project done, give a call or
+                  Are you impressed and want a project done, give me a call or
                   email me any time.
                 </p>
               </div>

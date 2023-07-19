@@ -19,8 +19,8 @@ SECRET_KEY = 'django-insecure-*#ds*1+$+q+i*@@0#^-um=yi*-yztmy8yc8fbv@z0%9!*3^lnu
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*'
-
+    '*',
+    'myresumeweb.herokuapp.com'
 ]
 
 
@@ -124,12 +124,12 @@ STATIC_URL = 'static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
 
-#     "http://localhost:3000",
-#     "https://jimmywaweru.herokuapp.com",
-
-# ]
+    "http://localhost:3000",
+    # 'myresumeweb.herokuapp.com',
+   
+]
 CORS_ORIGIN_ALLOW_ALL = True
 
 STATICFILES_DIRS = [

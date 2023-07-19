@@ -52,7 +52,6 @@ class ServicesOffred(models.Model):
     def __str__(self):
         return self.service_name
 
-
 class LanguagesIcons(models.Model):
     EXP_CHOICES = (
         ("Beginner", "Beginner"),
@@ -61,19 +60,18 @@ class LanguagesIcons(models.Model):
         ("Experienced", "Experienced"),
     )
 
-    icon = models.CharField(max_length=100, blank=True,
-                            verbose_name="language Icon Image:(icons8.com)")
-    lang_name = models.CharField(
-        max_length=100, blank=True, verbose_name="Language Name")
-    exp_level = models.CharField(max_length=200, blank=True, choices=EXP_CHOICES,
-                                 verbose_name="Experience Level")
+    icon_drive_id = models.CharField(max_length=100, blank=True, verbose_name="Language Icon Google Drive ID")
+    lang_name = models.CharField(max_length=100, blank=True, verbose_name="Language Name")
+    exp_level = models.CharField(max_length=200, blank=True, choices=EXP_CHOICES, verbose_name="Experience Level")
 
     class Meta:
         verbose_name_plural = 'Skills section'
 
+    def get_icon_url(self):
+        return f"https://drive.google.com/uc?id={self.icon_drive_id}"
+
     def __str__(self):
         return self.lang_name
-
 
 class Project(models.Model):
     language_used = models.CharField(max_length=100, blank=True, null=True)

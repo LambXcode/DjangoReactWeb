@@ -52,7 +52,7 @@
   border-radius: 25px !important;
   padding: 15px;
   transition: 0.5s;
-  height: 220px;
+  height: 100%;
   cursor: pointer;
   transform: scale(1) !important;
 }

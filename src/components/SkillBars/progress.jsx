@@ -65,18 +65,20 @@ const Progress = () => {
   };
 
   const items = icons?.map((details4) => {
+    const iconUrl = `https://drive.google.com/uc?id=${details4.icon_drive_id}`;
+  
     return (
       <div className="mylang" title={details4.lang_name} key={details4.id}>
         <div className="lang-info">
           <div className="lang-img">
-            <img src={details4.icon} alt="" />
+            <img src={iconUrl} alt="" />
           </div>
           <h3>{details4.lang_name}</h3>
           <p className={`${details4.exp_level}`}>{details4.exp_level}</p>
         </div>
       </div>
     );
-  });
+  });  
   return (
     <>
       <section id="skills">

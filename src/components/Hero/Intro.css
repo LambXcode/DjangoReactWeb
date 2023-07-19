@@ -56,10 +56,12 @@
   justify-content: space-evenly !important;
 }
 .intro-img {
-  width: 80%;
+  width: 50%;
+  height: 50%;
   border-radius: 10px;
   z-index: 50;
   margin-right: 0px !important;
+  object-fit: cover;
 }
 .ff {
   display: flex;

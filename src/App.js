@@ -37,7 +37,7 @@ function App() {
     <>
       <BrowserRouter>
         <div id="preloader">
-          <h2 className="name-load  animate-charcter">l O A D I N G</h2>
+          <h2 className="name-load  animate-charcter">Loading...</h2>
         </div>
         <div className="homepage">
           <Navbar />
