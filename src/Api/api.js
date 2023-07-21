@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // api url
 // const baseUrl = "http://127.0.0.1:8000/api";
-const baseUrl = "https://www.lamcode.co.za/api";
+const baseUrl = "https://www.lamcode.co.za/api"
 
 
 // Heroes' Section

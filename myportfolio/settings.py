@@ -10,20 +10,18 @@ import os
 # import dotenv
 # import dj_database_url
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 SECRET_KEY = 'django-insecure-*#ds*1+$+q+i*@@0#^-um=yi*-yztmy8yc8fbv@z0%9!*3^lnu'
 
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*',
     'www.lamcode.co.za',
-    'lamcode.co.za'
+    'lamcode.co.za',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,12 +38,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-
     "corsheaders.middleware.CorsMiddleware",
-
     'django.middleware.security.SecurityMiddleware',
-    # "whitenoise.middleware.WhiteNoiseMiddleware",
-
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'waitress.wsgi:application'
+WSGI_APPLICATION = 'myportfolio.wsgi.application'
 
 
 # django_heroku.settings(locals())
@@ -86,7 +81,7 @@ WSGI_APPLICATION = 'waitress.wsgi:application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -119,25 +114,23 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 CORS_ALLOWED_ORIGINS = [
-    "https://www.lamcode.co.za",
-    "http://localhost:3000",
-    # "https://www.lamcode.co.za",
-    # 'www.lamcode.co.za',
-    
-    # 'myresumeweb.herokuapp.com',
+    'https://www.lamcode.co.za',  # Add your custom domain with 'https://'
+    'https://lamcode.co.za',  
 ]
 CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_CREDENTIALS = True
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build','static'),
 ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
