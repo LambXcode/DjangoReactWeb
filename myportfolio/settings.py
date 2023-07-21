@@ -17,6 +17,7 @@ SECRET_KEY = 'django-insecure-*#ds*1+$+q+i*@@0#^-um=yi*-yztmy8yc8fbv@z0%9!*3^lnu
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '*',
     'www.lamcode.co.za',
     'lamcode.co.za',
     'djangoreactweb-6096ecf6e89b.herokuapp.com'
@@ -79,16 +80,16 @@ WSGI_APPLICATION = 'myportfolio.wsgi.application'
 # if os.path.isfile(dotenv_file):
 #     dotenv.load_dotenv(dotenv_file)
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+# }
 
 # DATABASES = {}
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600)
@@ -128,7 +129,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://lamcode.co.za',
     'https://djangoreactweb-6096ecf6e89b.herokuapp.com' 
 ]
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 STATICFILES_DIRS = [
