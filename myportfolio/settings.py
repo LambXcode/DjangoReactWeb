@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'myportfolio.wsgi.application'
+WSGI_APPLICATION = 'waitress.wsgi:application'
 
 
 # django_heroku.settings(locals())
