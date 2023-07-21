@@ -20,9 +20,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '*',
-    'myresumeweb1.herokuapp.com',
-    'myresumeweb.herokuapp.com',
-    ''
+    'www.lamcode.co.za',
+    'lamcode.co.za'
 ]
 
 
@@ -38,8 +37,6 @@ INSTALLED_APPS = [
     "corsheaders",
     'ckeditor',
     'tinymce',
-
-
 ]
 
 MIDDLEWARE = [
@@ -115,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Johannesburg'
 
 USE_I18N = True
 
@@ -127,16 +124,18 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
-
+    "https://www.lamcode.co.za",
     "http://localhost:3000",
+    # "https://www.lamcode.co.za",
+    # 'www.lamcode.co.za',
+    
     # 'myresumeweb.herokuapp.com',
-   
 ]
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'build/static'),
+# ]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
