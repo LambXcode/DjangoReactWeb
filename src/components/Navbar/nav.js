@@ -16,11 +16,19 @@ const Main = () => {
   // click to scroll
   $(document).ready(function () {
     $(".mainMenu li a").click(function (e) {
+      e.preventDefault();
+
       var targetHref = $(this).attr("href");
+      var targetOffset = $(targetHref).offset().top; // Get the top offset of the target section
+      var navbarHeight = $(".navbur").height(); 
+
+      console.log("Clicked on:", targetHref);
+
+      var scrollDestination = targetOffset - navbarHeight;
 
       $("html, body").animate(
         {
-          scrollTop: $(targetHref).offset().top,
+          scrollTop: scrollDestination,
         },
         1000
       );

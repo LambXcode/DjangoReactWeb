@@ -44,26 +44,27 @@ const Navbar = () => {
                   </li>
 
                   <li data-aos="fade-down" data-aos-duration="2000">
-                    <a href="#work">Contact</a>
+                    <a href="#contact">Contact</a>
                   </li>
                 </ul>
               </nav>
               <div className="nav-social">
-                <i className="fa fa-github"></i>
+                <a href="https://github.com/LambXcode/" target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-github"></i>
+                </a>
               </div>
               <div className="left-btns">
-                <div class=" " id="theme-button2">
-                  <input id="toggle" class="toggle" type="checkbox"></input>
+                <div className=" " id="theme-button2">
+                  <input id="toggle" className="toggle" type="checkbox"></input>
                 </div>
                 <div>
                   <div className="CvMe">
-                    <button className="#work">Contact Me</button>
+                    <button onClick={() => window.location.href = "#contact"}>Contact Me</button>
                   </div>
                 </div>
-
                 <div className=" " id="theme-button">
-                  <Link to="#" class="menuBtn">
-                    <span class="lines"></span>
+                  <Link to="#" className="menuBtn">
+                    <span className="lines"></span>
                   </Link>
                 </div>
               </div>

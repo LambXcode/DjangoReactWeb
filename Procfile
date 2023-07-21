@@ -1,1 +1,2 @@
-web: gunicorn MYPORTFOLIO.wsgi
+web: gunicorn DjangoReactWeb.wsgi
+frontend: npm start

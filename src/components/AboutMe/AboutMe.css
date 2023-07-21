@@ -165,12 +165,28 @@ i {
   pointer-events: none !important;
 }
 
+.about-img img {
+  display: flex;
+  width: 40%; /* Adjust the width as per your requirement */
+  height: auto; /* This will maintain the aspect ratio of the image */
+  margin-right: 0 !important;
+  margin-left: 170px;
+  box-shadow: black;
+  transition: transform 0.3s ease;
+
+}
+
+.about-img img:hover{
+  transform: scale(1.1);
+}
+
 /* Responsiveness */
 @media only screen and (min-width: 2560px) {
   .abouMe-row img {
     width: 50% !important;
   }
 }
+
 @media only screen and (max-width: 865px) {
   .aboutMe-container {
     padding: 30px 10px;
@@ -185,103 +201,46 @@ i {
     font-size: 0.8rem;
   }
   .about-img {
-    padding: 0 !important;
-  }
-  .about-info {
-    font-family: "Source Code Pro", monospace;
-  }
-  .abouMe-row {
-    padding-left: 20px;
-    padding-right: 10px;
+    padding: 0;
+    text-align: center;
   }
   .about-img img {
-    margin-right: 0 !important;
-    width: 90%;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
   }
-  .lang i {
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-  }
-  .about_myinfo {
+  .abouMe-row .about_myinfo {
     padding-left: 30px;
+    margin-top: 20px; /* Add margin to separate image and text on smaller screens */
   }
   .about-description p {
     font-size: 13px;
   }
   .download-cv {
-    margin-top: 0 !important;
+    margin-top: 0;
     width: 130px;
     font-size: 12px;
     height: 45px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .aboutMe-container {
-    padding: 30px 0px;
-    overflow: hidden;
-  }
-  .abouMe-row .title h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    line-height: 25px;
-  }
-  .about-img {
-    padding: 0 !important;
-  }
-  .about-img img {
-    margin-right: 0 !important;
-    width: 100%;
-  }
-  .lang i {
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-  }
-  .about_myinfo {
-    padding-left: 30px;
-  }
-  .about-description p {
-    font-size: 13px;
-  }
-  .download-cv {
-    margin-top: 0 !important;
-    width: 140px;
-    font-size: 12px !important;
-    height: 45px;
-  }
-}
-
 @media only screen and (max-width: 767px) {
-  .lang i {
-    width: 30px;
-    height: 30px;
+  .abouMe-row .about_myinfo {
+    padding-left: 0; /* Remove left padding to center the text */
+    margin-top: 0; /* Remove margin to keep image and text aligned */
   }
   .about-img img {
-    margin-right: 0 !important;
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .about-img {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .about-img img {
-    margin-right: 0 !important;
-    width: 100%;
-    margin-right: 0 !important;
+    max-width: 200px;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .abouMe-row {
-    padding-left: 10px;
+    flex-direction: column; /* Stack the image and text in a column layout */
   }
-  .about_myinfo {
-    padding: 10px !important;
+  .about-img img {
+    max-width: 150px;
   }
 }
 

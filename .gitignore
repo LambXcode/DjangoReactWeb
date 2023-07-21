@@ -12,7 +12,7 @@
 /build
 
 #Ignore
-myenv/
+# myenv/
 
 # misc
 .DS_Store
@@ -20,17 +20,6 @@ myenv/
 .env.development.local
 .env.test.local
 .env.production.local
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-'.env' 
-'.env' 
-.env
-<<<<<<< HEAD
-.env
-.env.example
-.env.local
-.env.staging
-=======
->>>>>>> 84cefccd43c36e597e37d9636f19b08cf697a451

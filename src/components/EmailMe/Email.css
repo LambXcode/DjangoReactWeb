@@ -34,14 +34,39 @@
 .hire-me-title h2 {
   font-size: 1.2rem;
 }
+
 .hire-btn {
+  position: relative;
   height: 50px;
   width: 150px;
   background: var(--color-button-hover);
   border-radius: 10px;
   font-size: 15px;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none; /* Remove the button's default border */
+  outline: none; /* Remove the button's default outline */
+  cursor: pointer;
 }
+
+.hire-btn:focus,
+.hire-btn:active {
+  outline: none; /* Remove the outline on focus and click */
+}
+
+.hire-btn .spinner-border {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 10px); /* Adjust the left value to position the spinner and text correctly */
+  transform: translate(-50%, -50%);
+}
+
+.hire-btn span {
+  display: inline-block;
+}
+
 .reachme-title {
   width: 100%;
 }
@@ -68,8 +93,6 @@
 .reachme-title p {
   font-size: 15px;
   line-height: 30px;
-}
-.contact-info {
 }
 .contact-info {
   display: flex;
@@ -150,8 +173,7 @@
     padding: 10px;
   }
 }
-.light .contact-info {
-}
+
 .light .email-me input {
   color: #000000;
 }

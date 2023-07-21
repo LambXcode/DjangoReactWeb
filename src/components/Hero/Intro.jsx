@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import decor3 from "../../images/decoration/Group-31.png";
-import decor4 from "../../images/decoration/Path-25.png";
+// import decor4 from "../../images/decoration/Path-25.png";
 import "./Intro.css";
 import { useGetHomeDetailsQuery } from "../../Api/api";
 import { useGetSocialMediaQuery } from "../../Api/api";
@@ -51,7 +51,7 @@ const Intro = () => {
                       data-aos="fade-down"
                       data-aos-duration="1600"
                     >
-                      Hey! I Am
+                      Hey! Im
                     </h3>
                     <h3
                       className="job  text-animate"
@@ -78,7 +78,7 @@ const Intro = () => {
                       className="contactMe"
                     >
                       <button className="contact-me">
-                        Hire me <i class="bx bx-send "></i>
+                        Hire me <i className="bx bx-send "></i>
                       </button>
                     </a>
                   </div>

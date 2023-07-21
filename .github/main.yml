@@ -1,1 +1,43 @@
+name: Deploy to Heroku
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to trigger the deployment
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.14.0  # Adjust to the version of Node.js your frontend requires
+
+      - name: Install frontend dependencies
+        run: npm install  # Or use yarn if you prefer
+
+      - name: Build the frontend app
+        run: npm run build  # Replace this with the appropriate command for your frontend
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11.3  # Adjust to the version of Python your Django app requires
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt  # Replace with the path to your requirements.txt file
+
+      - name: Run Django database migrations (if applicable)
+        run: python manage.py migrate  # If you have database migrations, replace this with the appropriate command
+
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}  # Set this secret in your GitHub repository settings
+          heroku_app_name: resumeweb1  # Replace with the name of your Heroku app
 
