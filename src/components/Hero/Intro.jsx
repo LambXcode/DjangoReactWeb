@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import decor3 from "../../images/decoration/Group-31.png";
+//import decor3 from "../../images/decoration/Group-31.png";
 // import decor4 from "../../images/decoration/Path-25.png";
 import "./Intro.css";
 import { useGetHomeDetailsQuery } from "../../Api/api";
@@ -30,7 +30,7 @@ const Intro = () => {
           <section className=" intro-page" id="home" key={detail.id}>
             <div className="decorations">
               <div className="decor-dot2">
-                <img src={decor3} alt="" />
+                {/* <img src={decor3} alt="" /> */}
               </div>
 
               <div className="parcol"></div>
@@ -77,9 +77,9 @@ const Intro = () => {
                       href={`mailto:${detail.hireMe_link}`}
                       className="contactMe"
                     >
-                      <button className="contact-me">
+                      {/* <button className="contact-me">
                         Hire me <i className="bx bx-send "></i>
-                      </button>
+                      </button> */}
                     </a>
                   </div>
                   <div
@@ -87,7 +87,7 @@ const Intro = () => {
                     data-aos="fade-up"
                     data-aos-duration="1800"
                   >
-                    <span>Follow Me:</span>
+                    {/* <span>Follow Me:</span> */}
                     <ul>
                       <li>
                         {contacts1Details &&

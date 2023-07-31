@@ -7,21 +7,26 @@ const ContactMe = () => {
   const [loading, setLoading] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
 
+  function isValidEmail(email){
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
   const handleSubscribe = async (e) => {
     e.preventDefault();
 
-    if (!email) {
-      alert("Please enter your email address.");
+    if (isValidEmail(email)) {
+      setLoading(true);
+
+      // Simulate a subscription process with a delay
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+  
+      setLoading(false);
+      setSubscribed(true);
+
+    } else {
+      alert('Not a valid email address.')
       return;
     }
-
-    setLoading(true);
-
-    // Simulate a subscription process with a delay
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    setLoading(false);
-    setSubscribed(true);
   };
 
   return (

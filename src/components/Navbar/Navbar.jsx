@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="col-xl-12 d-flex align-items-center lefty">
               <h5 className="ld-flex mr-auto devman">
                 <img
-                  src="https://code.google.com/images/developers.png"
+                  src=""
                   alt=""
                 />
                 Lamcode <span className="blink"> _</span>

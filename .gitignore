@@ -12,7 +12,7 @@
 # /build
 
 #Ignore
-# myenv/
+.myenv
 
 # misc
 .DS_Store

@@ -14,3 +14,4 @@ tzdata==2022.5
 waitress
 whitenoise
 dj_database_url
+python-dotenv

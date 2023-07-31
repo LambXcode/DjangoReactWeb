@@ -7,7 +7,7 @@
 }
 .intro-page::after {
   content: "";
-  background-image: url("/src/images/decoration/background.png");
+  background-image: url("/src/images/decoration/black.jpg");
   background-size: cover;
   position: absolute;
   top: 0px;
