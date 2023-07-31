@@ -73,11 +73,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'myportfolio.wsgi.application'
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
-dotenv_file = os.path.join(BASE_DIR, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
+# dotenv_file = os.path.join(BASE_DIR, ".env")
+# if os.path.isfile(dotenv_file):
+#     dotenv.load_dotenv(dotenv_file)
 
 # DATABASES = {
 #     'default': {
@@ -86,8 +86,12 @@ if os.path.isfile(dotenv_file):
 #     }
 # }
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=500)
+DATABASES = {
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+}
+
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=500)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
