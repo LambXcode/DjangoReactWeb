@@ -1,9 +1,9 @@
 import "./AboutMe.css";
 import { useGetAboutMeQuery, useGetHomeDetailsQuery } from "../../Api/api";
 import { useEffect, useState } from "react";
-import decor1 from "../../images/decoration/dots-1.png";
-import reactagle from "../../images/decoration/Rectangle-7.png";
-import shady from "../../images/decoration/dots.png";
+// import decor1 from "../../images/decoration/dots-1.png";
+// import reactagle from "../../images/decoration/Rectangle-7.png";
+// import shady from "../../images/decoration/dots.png";
 
 const AboutMe = () => {
   const { data: aboutData } = useGetAboutMeQuery();
@@ -29,13 +29,13 @@ const AboutMe = () => {
             <div className="aboutMe-container">
               <div className="about-decor">
                 <div className="about-dots">
-                  <img src={decor1} alt="" />
+                  {/* <img src={decor1} alt="" /> */}
                 </div>
                 <div className="about-rect">
-                  <img src={reactagle} alt="" />
+                  {/* <img src={reactagle} alt="" /> */}
                 </div>
                 <div className="about-shady">
-                  <img src={shady} alt="" />
+                  {/* <img src={shady} alt="" /> */}
                 </div>
               </div>
               <div className="abouMe-row">
